@@ -12,16 +12,16 @@
 # HINT: create a dictionary from flowers.txt
 
 # HINT: create a function
+
 def open_read():
     with open('flowers.txt') as flower:
         dictionary= {}
         for n in flower:
-            (key, value) = n.split(' ',1)
-            dictionary[key]= value
+            (key, value) = n.split(':')
+            dictionary[key]= value[:-1]
             name= input('Enter your name: ').upper()
-            key= name[3]
-            print(dictionary['key'])
-            break
+            index = name[0]
+            print(f'Unique flower name with the first letter: {dictionary[index]}')
 
 
 

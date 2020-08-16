@@ -24,8 +24,8 @@ def school_list():
     to {} if you submit all assignments before the due date.\n\n"
 
     # write a for loop that iterates through each set of names, assignments, and grades to print each student's message
-    for n in list_of_names, list_of_assignments:
-        print(message.format(n,n,potential_grade))
+    for i, names in enumerate(list_of_names):
+        print(message.format(names,int(list_of_assignments[i]), int(potential_grade[i])))
 
 
 school_list()

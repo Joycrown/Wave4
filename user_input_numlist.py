@@ -12,10 +12,13 @@ for i in range(10):
     
 # check to see if number is even and if yes, add to list_sum
 # print incorrect value warning  when ValueError exception occurs
-    number = userInput
-    user_list.append(number)
-    if number % 2 == 0:
-        list_sum += number
+    try:
+        number = int(userInput)
+        user_list.append(number)
+        if number % 2 == 0:
+            list_sum += number
+    except ValueError:
+        print('Incorrect value')
 
 
 print("user_list: {}".format(user_list))
