@@ -6,8 +6,8 @@ with open('flying_circus_cast.txt') as txt:
     def create_cast_list(filename):
         cast_list = []
         for n in txt:
-            list = n.split()
-            cast_list.append(list[:2])
+            list = n.split(',')[0]
+            cast_list.append(list)
 
 
 
